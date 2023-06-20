@@ -14,6 +14,7 @@
   "devDependencies": {
     "@electron-forge/cli": "^6.2.1",
     "@electron-forge/maker-deb": "^6.2.1",
+    "@electron-forge/maker-dmg": "^6.2.1",
     "@electron-forge/maker-rpm": "^6.2.1",
     "@electron-forge/maker-squirrel": "^6.2.1",
     "@electron-forge/maker-zip": "^6.2.1",
@@ -24,9 +25,20 @@
     "electron-squirrel-startup": "^1.0.0"
   },
   "build": {
-    "appId": "com.example.myapp",
+    "appId": "1",
+    "copyright": "wzy",
+    "productName": "my-electron-app",
+    "win": {
+      "files":{
+        "filter": ["!doc/*"]
+      },
+      "icon": "icon.ico"
+    },
     "mac": {
-      "icon": "./build/icons/icon.icns"
+      "files":{
+        "filter": ["!doc/*"]
+      },
+      "icon": "icon.icns"
     }
   }
 }
